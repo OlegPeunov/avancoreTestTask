@@ -1,0 +1,7 @@
+.component__radio-container{
+  display: flex;
+  border: rgb(8, 80, 8) solid 1px;
+  border-radius: 15px;
+  flex-wrap: wrap;
+  padding: 10px;
+}

@@ -1,0 +1,15 @@
+@import url('./__name/component__name.css');
+@import url('./__select/component__select.css');
+@import url('./__radio-container/component__radio-container.css');
+@import url('./__radio-element/component__radio-element.css');
+@import url('./__radio-text/component__radio-text.css');
+@import url('./__table-element/component__table-element.css');
+@import url('./__table-element/_type-chosen/component__table-element_type-chosen.css');
+
+.component{
+  border: black 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  
+}
