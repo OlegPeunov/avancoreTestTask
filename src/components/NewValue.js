@@ -21,7 +21,7 @@ function NewValue(props) {
   
   return (
     <form className="component" onSubmit={submitNewVal}>
-      <h2 className="component__name">Добавьте нове значение</h2>
+      <h2 className="component__name">Добавьте новое значение</h2>
       <input type="text" minLength="2" ref={inputRef} onChange={addNewValue}/>
 
  
