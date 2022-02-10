@@ -4,29 +4,34 @@ import Select from './Select';
 import Radio from './Radio';
 import Table from './Table';
 import Grid from './Grid';
-
+import NewValue from './NewValue';
 
 
 function App() {
 
-  const sortedInitialData = initialData.concat()
+  const copiedInitialData = initialData.concat()
+  const [sortedInitialData, setSortedInitialData] = React.useState([...copiedInitialData])
   const [chosenEl, setChosenEl] = React.useState('')
+  
 
   function sortData(){
     sortedInitialData.sort(function(a, b){
-      if(a.description < b.description && a.description !== 'Итоговые значения') { return -1; }
-      if(a.description > b.description) { return 1; }
+      if(a.description.toLocaleLowerCase() && b.description.toLocaleLowerCase() === 'итоговые значения' ){ return -1;}
+      if(a.description.toLocaleLowerCase() < b.description.toLocaleLowerCase() && a.description.toLocaleLowerCase() !== 'итоговые значения' ) { return -1; }
+      if(a.description.toLocaleLowerCase() > b.description.toLocaleLowerCase() ) { return 1; }
       return 0;
-    })
+    })   
   }
-  
-  sortData()
- 
-
+   
   function setttingElement(evt){
     setChosenEl(evt.target.id)
   }
 
+  function updaveValues(val){
+    setSortedInitialData([...sortedInitialData, {...val} ])
+  }
+
+  sortData()
 
   return (
     <div className="app">
@@ -34,7 +39,7 @@ function App() {
       <Radio sortedInitialData={sortedInitialData} chosenEl={chosenEl} setttingElementFunction={setttingElement}/>
       <Table sortedInitialData={sortedInitialData} chosenEl={chosenEl} setttingElementFunction={setttingElement} />              
       <Grid sortedInitialData={sortedInitialData} chosenEl={chosenEl} setttingElementFunction={setttingElement} />              
-      
+      <NewValue updaveValues={updaveValues}/>         
     </div>
   );
 }

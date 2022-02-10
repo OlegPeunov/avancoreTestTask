@@ -4,4 +4,6 @@
   border-radius: 15px;
   flex-wrap: wrap;
   padding: 10px;
+  flex-direction: column;
+  overflow: hidden;
 }
