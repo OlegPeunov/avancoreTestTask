@@ -5,6 +5,7 @@
 @import url('./__radio-text/component__radio-text.css');
 @import url('./__table-element/component__table-element.css');
 @import url('./__table-element/_type-chosen/component__table-element_type-chosen.css');
+@import url('./__grid/component__grid.css');
 
 .component{
   border: black 1px solid;
