@@ -3,6 +3,7 @@ import initialData from '../list.json';
 import Select from './Select';
 import Radio from './Radio';
 import Table from './Table';
+import Grid from './Grid';
 
 
 
@@ -29,9 +30,10 @@ function App() {
 
   return (
     <div className="app">
-      <Select sortedInitialData={sortedInitialData} chosenEl={chosenEl} setttingElementFunction={setttingElement} setChosenEl={setChosenEl}/>
+      <Select sortedInitialData={sortedInitialData} chosenEl={chosenEl} setChosenEl={setChosenEl}/>
       <Radio sortedInitialData={sortedInitialData} chosenEl={chosenEl} setttingElementFunction={setttingElement}/>
       <Table sortedInitialData={sortedInitialData} chosenEl={chosenEl} setttingElementFunction={setttingElement} />              
+      <Grid sortedInitialData={sortedInitialData} chosenEl={chosenEl} setttingElementFunction={setttingElement} />              
       
     </div>
   );
